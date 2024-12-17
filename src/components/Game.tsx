@@ -11,6 +11,7 @@ import {
   INITIAL_POSITION,
   INITIAL_SPEED,
   MIN_SPEED,
+  MAX_SPEED,
   SPEED_DECREASE_RATE,
   SCORE_INCREMENT,
   BONUS_SPAWN_INTERVAL,
@@ -93,12 +94,15 @@ export default function Game() {
         // Increase speed
         newSpeed = Math.max(
           MIN_SPEED,
-          INITIAL_SPEED - (newFoodEaten * SPEED_DECREASE_RATE)
+          Math.min(MAX_SPEED, INITIAL_SPEED - (newFoodEaten * SPEED_DECREASE_RATE))
         );
 
         // Spawn bonus item every BONUS_SPAWN_INTERVAL foods
         if (newFoodEaten % BONUS_SPAWN_INTERVAL === 0) {
           newBonusItem = generateBonusItem(newSnake, newFood);
+        }
+        if (!newActiveEffects.has('FREEZE')) { // Only grow if freeze is not active
+          newSnake.push(newSnake[newSnake.length - 1]); // Grow the snake
         }
       } else {
         // Remove tail unless we're growing

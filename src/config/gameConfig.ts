@@ -11,6 +11,7 @@ export const BONUS_SPAWN_INTERVAL = 5;
 export const COMBO_TIMEOUT = 3000;
 export const TIME_ATTACK_DURATION = 120000; // 2 minutes
 export const HAZARD_MOVE_INTERVAL = 2000;
+export const MAX_SPEED = 100; // Set your desired max speed here
 
 export const POWER_UP_POINTS = {
   FREEZE: 20,
