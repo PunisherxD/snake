@@ -2,7 +2,7 @@ import { Position, BonusItem, BonusType } from '../types/game';
 import { GRID_SIZE, BONUS_DURATION } from '../config/gameConfig';
 
 export const generateBonusItem = (snake: Position[], food: Position): BonusItem => {
-  const types: BonusType[] = ['SPEED', 'DOUBLE_POINTS', 'SHRINK'];
+  const types: BonusType[] = ['SPEED', 'DOUBLE_POINTS'];
   const randomType = types[Math.floor(Math.random() * types.length)];
   
   let position: Position;
@@ -29,8 +29,6 @@ export const getBonusColor = (type: BonusType): string => {
       return 'bg-yellow-400';
     case 'DOUBLE_POINTS':
       return 'bg-purple-400';
-    case 'SHRINK':
-      return 'bg-blue-400';
     default:
       return 'bg-white';
   }

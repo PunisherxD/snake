@@ -102,7 +102,7 @@ export default function Game() {
         }
       } else {
         // Remove tail unless we're growing
-        if (!newActiveEffects.has('SHRINK')) {
+        {
           newSnake.pop();
         }
       }

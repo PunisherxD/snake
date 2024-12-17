@@ -10,12 +10,8 @@ export const BONUS_DURATION = 5000; // Adding the missing constant
 export const BONUS_SPAWN_INTERVAL = 5;
 export const COMBO_TIMEOUT = 3000;
 export const TIME_ATTACK_DURATION = 120000; // 2 minutes
-export const HAZARD_MOVE_INTERVAL = 2000;
 
 export const POWER_UP_POINTS = {
-  FREEZE: 20,
-  SHRINK: 25,
-  SHIELD: 30,
   SPEED: 20,
   DOUBLE_POINTS: 30,
 };
@@ -23,7 +19,6 @@ export const POWER_UP_POINTS = {
 export const BONUS_POINTS = {
   SPEED: 20,
   DOUBLE_POINTS: 30,
-  SHRINK: 25,
 };
 
 export const ACHIEVEMENTS = [

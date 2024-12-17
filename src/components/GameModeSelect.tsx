@@ -22,20 +22,6 @@ export const GameModeSelect: React.FC<GameModeSelectProps> = ({ onSelect }) => {
         <h3 className="text-xl font-bold mb-2">Endless Mode</h3>
         <p className="text-sm">No walls, wrap around edges</p>
       </button>
-      <button
-        onClick={() => onSelect('TIME_ATTACK')}
-        className="px-6 py-4 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
-      >
-        <h3 className="text-xl font-bold mb-2">Time Attack</h3>
-        <p className="text-sm">Score as much as possible in 2 minutes</p>
-      </button>
-      <button
-        onClick={() => onSelect('SURVIVAL')}
-        className="px-6 py-4 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
-      >
-        <h3 className="text-xl font-bold mb-2">Survival Mode</h3>
-        <p className="text-sm">Dodge hazards while collecting food</p>
-      </button>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { Position, PowerUp, PowerUpType } from '../types/game';
 import { GRID_SIZE, POWER_UP_DURATION } from '../config/gameConfig';
 
 export const generatePowerUp = (snake: Position[], food: Position): PowerUp => {
-  const types: PowerUpType[] = ['FREEZE', 'SHRINK', 'SHIELD', 'SPEED', 'DOUBLE_POINTS'];
+  const types: PowerUpType[] = ['SPEED', 'DOUBLE_POINTS'];
   const randomType = types[Math.floor(Math.random() * types.length)];
   
   let position: Position;
@@ -25,12 +25,6 @@ export const generatePowerUp = (snake: Position[], food: Position): PowerUp => {
 
 export const getPowerUpColor = (type: PowerUpType): string => {
   switch (type) {
-    case 'FREEZE':
-      return 'bg-blue-400';
-    case 'SHIELD':
-      return 'bg-yellow-400';
-    case 'SHRINK':
-      return 'bg-purple-400';
     case 'SPEED':
       return 'bg-green-400';
     case 'DOUBLE_POINTS':

@@ -5,11 +5,10 @@ export type Position = {
 
 export type Direction = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT';
 
-export type GameMode = 'CLASSIC' | 'ENDLESS' | 'TIME_ATTACK' | 'SURVIVAL';
+export type GameMode = 'CLASSIC' | 'ENDLESS';
 
-export type BonusType = 'SPEED' | 'DOUBLE_POINTS' | 'SHRINK';
-export type PowerUpType = 'FREEZE' | 'SHRINK' | 'SHIELD' | 'SPEED' | 'DOUBLE_POINTS';
-export type HazardType = 'POISON' | 'MOVING_WALL';
+export type BonusType = 'SPEED' | 'DOUBLE_POINTS';
+export type PowerUpType = 'SPEED' | 'DOUBLE_POINTS';
 
 export type BonusItem = {
   position: Position;
@@ -21,12 +20,6 @@ export type PowerUp = {
   position: Position;
   type: PowerUpType;
   expiresAt: number;
-};
-
-export type Hazard = {
-  position: Position;
-  type: HazardType;
-  moveDirection?: Direction;
 };
 
 export type Achievement = {
@@ -50,7 +43,6 @@ export type GameState = {
   foodEaten: number;
   bonusItem: BonusItem | null;
   activeEffects: Set<BonusType | PowerUpType>;
-  hazards: Hazard[];
   timeLeft?: number;
   combo: number;
   lastFoodEatenTime: number;
